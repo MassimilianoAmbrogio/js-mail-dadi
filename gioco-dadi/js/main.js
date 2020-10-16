@@ -8,36 +8,21 @@
  */
 
 //  Start variables
-var numeroRandom = ('Inserisci numR1 0 numR2');
 
-var giocatore, pc = parseInt(prompt('Inserisci un numero da 1 a 6'));
-
-// Gen. numeri random giocatore
+// Gen. numeri random giocatore e pc
 var giocatore = Math.floor(Math.random() * 6) + 1;
 console.log(giocatore);
 
-// Gen. numeri random pc
 var pc = Math.floor(Math.random() * 6) + 1;
 console.log(pc);
 
-// Totale
-var totale = giocatore + pc;
-
-// Controllo se numR1 o 2
-var risultato;
-
-if (totale % 2 == 0) {
-  risultato = 'numR1';
+// Vincitore
+if (giocatore > pc) {
+  console.log('Vince il giocatore');
+}
+else if (giocatore < pc) {
+  console.log('Vince il pc');
 }
 else {
-  risultato = 'numR2';
+  console.log('Pareggio');
 }
-
-// Controllo vincitore
-if (numeroRandom == risultato) {
-  console.log('Hai vinto per punteggio più alto');
-}
-else {
-  console.log('Vince per punteggio più alto il pc');
-}
-

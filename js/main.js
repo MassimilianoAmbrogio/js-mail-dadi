@@ -6,23 +6,24 @@
  */
 
 //  Start variables
+var emails = ['antonio.petr@gmail.com', 'giorgiafas.30@gmail.com', 'lucasdev.05@gmail.com'];
 
 //  Domanda all'utente
-var email = parseInt(prompt('Quale è la tua mail?'));
-var message1;
-var message2;
+var emailUtente = prompt('Inserisci la tua email');
+var emailFound = false;
+
+for (var i = 0; i < emails.length; i++) {
+
+    if (emails[i] == emailUtente) {
+        emailFound = true;
+    }
+}
+
+// Feedback
+if (emailFound === true) {
+    console.log('Puoi accedere');
+}
+else {
+    console.log('Non puoi accedere');
+}
  
-// Lista mail
-var list = ['antonio.petr@hotmail.com', 'giorgiafas.30@gmail.com', 'lucasdev.05@alice.it'];
-console.log(list);
-
-// Accesso lista e conrollo
-console.log(list.length);
-console.log('Controllo che sia presente nella lista...') + message1;
-
-message1 = 'Controllo completato mail presente';
-message2 = 'Controllo completato mail non presente';
-
-document.getElementById('mail').innerHTML = message1;
-
-document.getElementById('mail').innerHTML = message2;
