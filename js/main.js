@@ -20,7 +20,7 @@ for (var i = 0; i < emails.length; i++) {
 }
 
 // Feedback
-if (emailFound === true) {
+if (emailFound == true) {
     console.log('Puoi accedere');
 }
 else {
